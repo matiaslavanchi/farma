@@ -1,0 +1,68 @@
+page-lista {
+@keyframes heartbeat
+{
+  0%{transform: scale( 1 );}
+  20%{transform: scale( 1.25 );}
+  40%{transform: scale( 1 );}
+  60%{transform: scale( 1.25 );}
+  80%{transform: scale( 1 );}
+  100%{transform: scale( 1 );}
+}
+.beat {
+  -webkit-animation: hearbeat ease-in 40; 
+  animation:heartbeat ease-in 40;
+  -webkit-animation-duration: 5000ms;
+  animation-duration: 5000ms;
+}
+header { 
+  padding: .5vw;
+  font-size: 0;
+  display: -ms-flexbox;
+  -ms-flex-wrap: wrap;
+  -ms-flex-direction: column;
+  -webkit-flex-flow: row wrap; 
+  flex-flow: row wrap; 
+  display: -webkit-box;
+  display: flex;
+}
+header div { 
+  -webkit-box-flex: auto;
+  -ms-flex: auto;
+  flex: auto; 
+  width: 200px; 
+  margin: .5vw; 
+}
+header div img { 
+  width: 100%; 
+  height: auto; 
+}
+@media screen and (max-width: 400px) {
+  header div { margin: 0; }
+  header { padding: 0; }
+}
+
+/*AnimaciÃ³n para la transiciÃ³n page detalles*/
+@-webkit-keyframes animateInPrimary {
+  0% {-webkit-transform: translate3d(-100%,0,0);}
+  100% {-webkit-transform: translate3d(0,0,0);}
+}
+@-webkit-keyframes animateInSecondary{
+  0% {opacity: 0;}
+  50% {opacity: 0;} 
+  100% {opacity: 1;}
+} 
+.animateImage {
+  -webkit-animation: animateInPrimary;
+  animation: animateInPrimary;
+  -webkit-animation-duration: 2000ms;
+  animation-duraton: 2000ms;
+} 
+.animateText {
+  -webkit-animation: animateInSecondary ease-in 1;
+  animation: animateInSecondary ease-in 1;
+  -webkit-animation-duration: 1500ms;
+  animation-duraton: 1500ms;
+  white-space:normal;
+}
+
+}
